@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #e0e0e0;
+    background-color: rgb(88, 87, 87) !important;
     background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
 }
 
@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6, p, span {
     height: 100%;
     margin: auto;
     padding: 1.3rem;
+    background-color: #e0e0e0 !important;
     border-left: 3px solid rgb(88, 87, 87);
     border-right: 3px solid rgb(88, 87, 87);
     box-shadow: -2px 0px 24px 7px rgba(0,0,0,0.34) inset;
@@ -62,11 +63,12 @@ h1, h2, h3, h4, h5, h6, p, span {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .header .bio {
     font-style: italic;
+    text-align: center;
     color: rgb(88, 87, 87);
 }
 
@@ -156,12 +158,18 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 @media (max-width: 507px) {
+    .container {
+        width: 95%;
+    }
     .skill {
         width: 90%;
     }
 }
 
 @media (max-width: 726px) {
+    .container {
+        width: 85%;
+    }
     .skill {
         width: 70%;
     }

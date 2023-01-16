@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d6344ca0b7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Adesanmi Dayo PraiseGod</title>
 </head>
 
@@ -14,7 +15,7 @@
     <header class="header" id="header">
         <h1 class="title-name">Adesanmi Dayo PraiseGod</h1>
         <div class="img-wrapper">
-            <img src="img/aa.jpg" alt="" srcset="">
+            <img src="img/new.jpg" alt="" srcset="">
         </div>
         <p class="bio">Software Engineer | Django Developer | Educator...</p>
         <div class="social">
@@ -23,6 +24,8 @@
             <a href="https://twitter.com/PraisegodDayo"><i class="fa-brands fa-square-twitter"></i></a>
             <a href="https://www.instagram.com/adesanmidayopraisegod/"><i class="fa-brands fa-square-instagram"></i></a>
             <a href="https://www.facebook.com/adesanmi.dayoprasegod/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/2349033345017"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <a href="tel:+2349033345017"><i class="fa-solid fa-square-phone"></i></a>
         </div>
         <!-- <div class="about-container"> -->
         <small class="about about-container">
@@ -34,7 +37,9 @@
     <hr class="line-brake">
 
     <section class="skill" id="skill">
-        <h1>Skills</h1>
+
+        <canvas id="skill-chart"></canvas>
+        <!-- <h1>Skills</h1>
         <p>Frontend</p>
         <div class="skills-container">
             <p class="skills frontend"></p>
@@ -53,7 +58,7 @@
         <p>Rest API</p>
         <div class="skills-container">
             <p class="skills rest-api"></p>
-        </div>
+        </div> -->
 
     </section>
 
@@ -65,6 +70,29 @@
             </a>
         </div>
     </section>
+
+    <script>
+        const ctx = document.getElementById('skill-chart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Frontend', 'Backend', 'Python', 'Version Control', 'RestAPI', 'DevOps'],
+                datasets: [{
+                    label: 'Skills',
+                    data: [12, 20, 40, 25, 35, 10],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 
 
     <script src="js/script.js"></script>
